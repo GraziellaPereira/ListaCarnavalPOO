@@ -19,11 +19,12 @@ namespace Exercicio2
             {
                 Console.WriteLine("Digite M ou F!");
                 return;
-
             }
             else
             {
-                
+                Console.WriteLine("Digite sua altura: ");
+                h = double.Parse(Console.ReadLine());
+
                 if (sexo == "F")
                 {
                     pesoIdeal = (62.1 * h) - 44.7;
@@ -32,7 +33,7 @@ namespace Exercicio2
                 {
                     pesoIdeal = (72.7 * h) - 58;
                 }
-
+                Console.WriteLine("Seu peso ideal é: " + pesoIdeal);
             }
            
             Console.ReadKey();
