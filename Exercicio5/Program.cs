@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercicio5
 {
@@ -10,50 +6,95 @@ namespace Exercicio5
     {
         static void Main(string[] args)
         {
-            string mamifero, quadrupede, carnivoro, herbivoro, bipede, onivoro;
-            Console.WriteLine("Vamos descobrir qual animal será escolhido: digite S para sim e N para não em cada uma das perguntas: ");
-            Console.WriteLine("É mamífero? ");
-            mamifero = Console.ReadLine().Trim().ToUpper();
-            
-            
-            Console.WriteLine("É Herbívoro? ");
-            herbivoro = Console.ReadLine().Trim().ToUpper();
+            string resposta;
 
-            if (mamifero == "S")
+            Console.WriteLine("Vamos descobrir qual animal foi escolhido!");
+            Console.WriteLine("Digite 'S' para Sim e 'N' para Não.");
+
+  
+            Console.Write("É mamífero? ");
+            resposta = Console.ReadLine().Trim().ToUpper();
+
+            if (resposta == "S") 
             {
-                Console.WriteLine("É quadrúpede? ");
-                quadrupede = Console.ReadLine().Trim().ToUpper();
+                Console.Write("É quadrúpede? ");
+                resposta = Console.ReadLine().Trim().ToUpper();
 
-                if (quadrupede == "S") {
-                    Console.WriteLine("É Carnívoro? ");
-                    carnivoro = Console.ReadLine().Trim().ToUpper();
-
-                    if (carnivoro == "S")
-                    {
-                        Console.WriteLine("Animal escolhido: LEÃO");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Animal escolhido: CAVALO");
-                    }
-                }  else
+                if (resposta == "S")  
                 {
-                    Console.WriteLine("É bípede? ");
-                    bipede = Console.ReadLine().Trim().ToUpper();
+                    Console.Write("É carnívoro? ");
+                    resposta = Console.ReadLine().Trim().ToUpper();
 
-                    if (bipede == "S") {
-                        Console.WriteLine("É onívoro? ");
-                        onivoro = Console.ReadLine().Trim().ToUpper();
+                    if (resposta == "S")
+                        Console.WriteLine("Animal escolhido: LEÃO");
+                    else
+                        Console.WriteLine("Animal escolhido: CAVALO");
+                }
+                else 
+                {
+                    Console.Write("É bípede? ");
+                    resposta = Console.ReadLine().Trim().ToUpper();
 
-                        if (onivoro == "S") {
+                    if (resposta == "S")  
+                    {
+                        Console.Write("É onívoro? ");
+                        resposta = Console.ReadLine().Trim().ToUpper();
+
+                        if (resposta == "S")
                             Console.WriteLine("Animal escolhido: HOMEM");
-                        } else
-                        {
+                        else
                             Console.WriteLine("Animal escolhido: MACACO");
-                        }
+                    }
+                    else  
+                    {
+                        Console.Write("Ele voa? ");
+                        resposta = Console.ReadLine().Trim().ToUpper();
+
+                        if (resposta == "S")
+                            Console.WriteLine("Animal escolhido: MORCEGO");
+                        else
+                            Console.WriteLine("Animal escolhido: BALEIA");
                     }
                 }
             }
+            else  
+            {
+                Console.Write("É uma ave? ");
+                resposta = Console.ReadLine().Trim().ToUpper();
+
+                if (resposta == "S")  
+                {
+                    Console.Write("Ela voa? ");
+                    resposta = Console.ReadLine().Trim().ToUpper();
+
+                    if (resposta == "N")  
+                    {
+                        Console.Write("Ela é tropical? ");
+                        resposta = Console.ReadLine().Trim().ToUpper();
+
+                        if (resposta == "S")
+                            Console.WriteLine("Animal escolhido: AVESTRUZ");
+                        else
+                            Console.WriteLine("Animal escolhido: PINGUIM");
+                    }
+                    else  
+                    {
+                        Console.Write("Ela é uma ave de rapina? ");
+                        resposta = Console.ReadLine().Trim().ToUpper();
+
+                        if (resposta == "S")
+                            Console.WriteLine("Animal escolhido: ÁGUIA");
+                        else
+                            Console.WriteLine("Animal escolhido: PATO");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Animal não identificado na lista.");
+                }
+            }
+
+            Console.ReadKey();
         }
     }
 }
